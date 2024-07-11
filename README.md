@@ -37,7 +37,18 @@
     ~~~
 
 ## Light House 성능지표
-블라블라
+- <style> 태그 내에 중요한 스타일을 직접 작성하여 페이지 로딩 시 바로 적용
+- media="print"로 설정하여 초기 로딩 시 렌더링을 차단하지 않도록
+- onload="this.media='all'"을 사용하여 CSS 파일이 로드된 후 media 속성을 all로 변경하여 스타일을 적용
+- CSS 파일을 페이지 렌더링을 방해하지 않도록 비동기적으로 로드한 후, 로드가 완료되면 CSS를 실제로 적용
+
+**개선 전**
+![스크린샷 2024-07-12 002438](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/142154451/d5b1eb6c-7836-471c-8d49-2890b86ac241)
+
+**개선 후**
+![스크린샷 2024-07-12 003646](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/142154451/1842637e-ec7c-4be4-a12d-4e8c503abca5)
+
+
 
 ## 팀 Commit Rule
 

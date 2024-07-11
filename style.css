@@ -139,3 +139,7 @@ h1 span {
     background-color: #D1E9FF;
     color: #2D31A6;
 }
+
+#home_link {
+    text-decoration: none;
+}

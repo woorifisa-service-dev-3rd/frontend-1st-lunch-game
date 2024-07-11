@@ -1,14 +1,9 @@
-//Russian Roulette Game- by Daffa Ahmad Ibrahim (https://github.com/Daffabot)
-//Visit Daffabot (https://github.com/Daffabot) for script in github
-//Credit must stay intact for use
-
 function fireit() {
     var spin = Math.floor(Math.random() * 6);
     var base = document.getElementById("base");
   
     if (spin <= document.fire.bullets.value - 1) {
       setTimeout(() => {
-        document.getElementById("fireit()").play();
         base.classList.remove("idle");
         base.classList.add("shoot");
       }, 100);
@@ -21,7 +16,6 @@ function fireit() {
       }, 1000);
     } else {
       setTimeout(() => {
-        document.getElementById("fail()").play();
         base.classList.remove("idle");
         base.classList.add("break");
       }, 1);

@@ -7,3 +7,81 @@
 #main {
     background-color: #D1E9FF;
 }
+
+body {
+    background-color: #E2EDFF;
+}
+h1 {
+    text-align: center;
+    color: #2D31A6;
+}
+h1 span {
+    color: #000000;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.button-group input[type="button"] {
+    margin: 0 1%;
+    padding: 0.5rem 1rem;
+    background-color: #2D31A6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.button-group strong {
+    margin: 0 0.5rem;
+    align-self: center;
+}
+.content {
+    background-color: #FFFEFF;
+    border-radius: 1cm;
+    width: 50%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tab-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+}
+.tab-buttons input[type="button"] {
+    width: 33.33%;
+    height: 100%;
+    border: 1px solid #DCD9D9;
+    background-color: #FFFEFF;
+    border-radius: 0;
+    cursor: pointer;
+}
+.tab-buttons input[type="button"]:first-child {
+    border-radius: 1cm 0 0 0;
+    background-color: #1E4EAE;
+    color: #fff;
+}
+.tab-buttons input[type="button"]:nth-child(3) {
+    border-radius: 0 1cm 0 0;
+}
+.input-group {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.input-group input[type="text"] {
+    width: 80%;
+    height: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+}
+.input-group input[type="button"] {
+    height: 2rem;
+    border: 1px solid #2D31A6;
+    background-color: #2D31A6;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}

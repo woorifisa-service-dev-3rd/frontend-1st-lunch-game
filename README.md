@@ -7,7 +7,32 @@
 블라블라
 
 ## UI Style Guide Line
-블라블라
+1. 폰트 서체 및 폰트 사이즈
+- 폰트 서체 : 우리다움체(Wooridaum)
+- 폰트 사이즈 : 13px, 16px, 19px, 20px
+
+2. 컬러 배색
+- background-color : #D1E9FF
+- point-color : #2D31A6
+![Group 1](https://github.com/yaejinkong/note/assets/127467781/a7440d0a-a39a-4502-9ef3-d8c73c4e345b)
+<br>
+
+- 참고한 color pallete
+![color1](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/127467781/a9d16dc0-3540-4b9a-adfa-2df3909ac79d)
+![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/127467781/ab1dd59e-47d0-4660-974b-c3e310078954)
+
+3. 여백 및 정렬
+    ~~~css
+    .content {
+    background-color: #FFFEFF;
+    border-radius: 1cm;
+    width: 50%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    ~~~
 
 ## Light House 성능지표
 블라블라

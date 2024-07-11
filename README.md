@@ -48,7 +48,8 @@
 **개선 후**
 ![스크린샷 2024-07-12 003646](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/142154451/1842637e-ec7c-4be4-a12d-4e8c503abca5)
 
-
+개선 추가
+![picture](image-1.png)
 
 ## 팀 Commit Rule
 

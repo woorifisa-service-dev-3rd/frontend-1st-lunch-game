@@ -7,7 +7,12 @@
 블라블라
 
 ## UI Style Guide Line
-블라블라
+1. 폰트 서체 및 폰트 사이즈
+- 폰트 서체 : 우리다움체(Wooridaum)
+- 폰트 사이즈 : 13px, 16px, 19px, 20px
+
+2. 컬러 배색
+
 
 ## Light House 성능지표
 블라블라

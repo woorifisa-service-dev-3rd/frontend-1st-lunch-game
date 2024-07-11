@@ -66,35 +66,16 @@ h1 span {
 .tab-buttons input[type="button"]:nth-child(3) {
     border-radius: 0 1cm 0 0;
 }
-/* .input-group {
-    text-align: center;
-    padding-bottom: 1rem;
-}
-.input-group input[type="text"] {
-    width: 80%;
-    height: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 0 0.5rem;
-}
-.input-group input[type="button"] {
-    height: 2rem;
-    border: 1px solid #2D31A6;
-    background-color: #2D31A6;
-    color: #fff;
-    border-radius: 0.5rem;
-    cursor: pointer;
-} */
 
 .input-group {
-    width: 398px;
-    height: 53px;
-    left: 100px;
-    bottom: 23px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
     position: relative;
     display: flex;
+    align-items: center;
 }
-.input-group input {
+.input-group input[type="text"] {
     width: 100%;
     height: 46px;
     font-size: 20px;
@@ -103,11 +84,12 @@ h1 span {
     border: #1E4EAE solid 7px;
     text-align: center;
 }
-.input-group input:focus {
+.input-group input[type="text"]:focus {
     outline: none;
 }
 .input-group button {
     position: absolute;
+    right: 5px;
     border-radius: 20px;
     border: #1E4EAE solid 7px;
     background-color: #1E4EAE;
@@ -117,4 +99,5 @@ h1 span {
     margin-left: 328px;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
 }

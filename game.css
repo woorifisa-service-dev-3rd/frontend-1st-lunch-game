@@ -127,20 +127,6 @@ section.container {
 }
 
 /* 탄약 숫자 고르는 select 태그 */
-.shoot {
-    background: url(../fire.gif) no-repeat;
-    src: url(../fire.gif);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    display: table;
-    vertical-align: middle;
-}
-
-
-
 /* select#bullets {
     color: #ffffff;
     font-size: xx-large;
@@ -167,8 +153,8 @@ section.container {
 
 /* 총 쏘는 이미지 */
 .idle {
-    background: url(../main.png) no-repeat;
-    src: url(../main.png);
+    background: url(main.png) no-repeat;
+    /* src: url(../main.png); */
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -179,8 +165,20 @@ section.container {
 }
 
 .break {
-    background: url(../fail.gif) no-repeat;
-    src: url(../fail.gif;);
+    background: url(fail.gif) no-repeat;
+    /* src: url(../fail.gif;); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.shoot {
+    background: url(fire.gif) no-repeat;
+    /* src: url(../fire.gif); */
     background-size: cover;
     background-position: center;
     text-align: center;

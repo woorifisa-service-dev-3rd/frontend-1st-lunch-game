@@ -18,6 +18,7 @@ h1 {
 h1 span {
     color: #000000;
 }
+
 .center {
     display: flex;
     justify-content: center;
@@ -31,6 +32,12 @@ h1 span {
     border-radius: 0.5rem;
     cursor: pointer;
 }
+.button-group input[type="button"]:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
+}
+
 .button-group strong {
     margin: 0 0.5rem;
     align-self: center;
@@ -63,6 +70,12 @@ h1 span {
     background-color: #1E4EAE;
     color: #fff;
 }
+
+.tab-buttons input[type="button"]:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+}
+
 .tab-buttons input[type="button"]:nth-child(3) {
     border-radius: 0 1cm 0 0;
 }
@@ -121,4 +134,8 @@ h1 span {
 #woori_ci {
     width: 25px;
     height: 25px;
+}
+.input-group button:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
 }

@@ -1,0 +1,9 @@
+@import url(https://websfont.github.io/wooriDaum/wooriDaum.css);
+
+* {
+    font-family: 'wooriDaum';
+}
+
+#main {
+    background-color: #D1E9FF;
+}

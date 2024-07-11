@@ -14,10 +14,12 @@
 2. 컬러 배색
 - background-color : #D1E9FF
 - point-color : #2D31A6
+
 ![Group 1](https://github.com/yaejinkong/note/assets/127467781/a7440d0a-a39a-4502-9ef3-d8c73c4e345b)
 <br>
 
 - 참고한 color pallete
+  
 ![color1](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/127467781/a9d16dc0-3540-4b9a-adfa-2df3909ac79d)
 ![image](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/127467781/ab1dd59e-47d0-4660-974b-c3e310078954)
 

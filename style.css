@@ -94,7 +94,6 @@ h1 span {
     position: relative;
     display: flex;
 }
-
 .input-group input {
     width: 100%;
     height: 46px;
@@ -104,11 +103,9 @@ h1 span {
     border: #1E4EAE solid 7px;
     text-align: center;
 }
-
 .input-group input:focus {
     outline: none;
 }
-
 .input-group button {
     position: absolute;
     border-radius: 20px;

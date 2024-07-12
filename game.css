@@ -1,0 +1,189 @@
+.side-button {
+    display: flex;
+    justify-content: end;
+    border: none;
+    margin-right: 50px;
+}
+
+/* modal source */
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.button {
+    font-size: 19px;
+    font-weight: 600;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.box_modal {
+    position: fixed;
+    display: block;
+    width: 300px;
+    height: 150px;
+    top: 15%;
+    left: 90%;
+    margin-top: -75px;
+    margin-left: -150px;
+    background: #d9e5e9;
+    border: 1px solid #386980;
+    overflow: hidden;
+    visibility: collapse;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+}
+
+.box_modal:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.closer {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    background: #eee;
+    border-left: 1px solid #386980;
+    border-bottom: 1px solid #386980;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16x;
+    cursor: pointer;
+}
+
+.text {
+    display: inline-block;
+    padding: 20px;
+}
+
+.text h3 {
+    font-size: 19px;
+    margin: 0;
+}
+
+.text p {
+    font-size: 13px;
+}
+
+/* 모달 윈도우가 팝업되는 코어 소스 */
+input#modal[type=checkbox]:checked~.box_modal {
+    visibility: visible;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+section.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    min-width: 100vw;
+}
+
+
+.frame-img {
+    max-width: 100vw;
+    min-height: 50vh;
+}
+
+#base {
+    border: none;
+    max-width: 100vw;
+    min-height: 50vh;
+}
+
+/* form {
+    min-width: 50vw;
+    max-height: 100vh;
+} */
+
+
+/* shooting 버튼 */
+.btn {
+    margin: 0 1%;
+    padding: 0.5rem 1rem;
+    background-color: #2D31A6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
+}
+
+/* 탄약 숫자 고르는 select 태그 */
+/* select#bullets {
+    color: #ffffff;
+    font-size: xx-large;
+    padding: 16px 20px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  } */
+
+#bullets {
+    background: #2D31A6;
+    color: #fff;
+    border: 1px solid #2D31A6;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    max-width: 100px auto;
+    margin-bottom: 15px;
+    background: #2D31A6;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 0;
+}
+
+
+/* 총 쏘는 이미지 */
+.idle {
+    background: url(main.png) no-repeat;
+    /* src: url(../main.png); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.break {
+    background: url(fail.gif) no-repeat;
+    /* src: url(../fail.gif;); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.shoot {
+    background: url(fire.gif) no-repeat;
+    /* src: url(../fire.gif); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}

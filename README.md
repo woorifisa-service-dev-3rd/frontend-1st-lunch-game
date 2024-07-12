@@ -4,7 +4,17 @@
 > 매일 점심시간마다 **"오늘은 뭐 먹지?"** 라는 행복한 고민을 하는 사람들도 있는 반면, 매일 점심메뉴 고르는 것이 가장 힘든 사람들이 있습니다. 바로 우리 KimKong처럼요. 뭐든 잘 먹지만 선택이 어려운 분들을 위해 만들게 되었습니다.
 
 ## 페이지 사용법
-블라블라
+
+### 페이지 이용영상
+![alt text](<img/Woori FISA 3rd Project - Chrome 2024-07-12 08-56-34.gif>)
+
+### 페이지 각 기능별 소개
+
+식당 정하기 페이지
+![alt text](img/Lunch_Game_Main.png)
+
+쏠사람 정하기 페이지
+![alt text](img/Lunch_Game_Shooting.png)
 
 ## UI Style Guide Line
 1. 폰트 서체 및 폰트 사이즈
@@ -47,9 +57,6 @@
 
 **개선 후**
 ![스크린샷 2024-07-12 003646](https://github.com/woorifisa-service-dev-3rd/frontend-1st-lunch-game/assets/142154451/1842637e-ec7c-4be4-a12d-4e8c503abca5)
-
-개선 추가
-![picture](image-1.png)
 
 ## 팀 Commit Rule
 

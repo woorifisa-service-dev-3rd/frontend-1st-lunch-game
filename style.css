@@ -3,86 +3,102 @@
 * {
     font-family: 'wooriDaum';
 }
+
 .header {
     position: relative;
     display: flex;
     justify-content: flex-end;
 }
+
 .side-button {
     display: flex;
     justify-content: end;
     border: none;
     margin-right: 50px;
 }
-/* modal source */
-.hidden {
+
+#modal {
     display: none;
-    visibility: hidden;
 }
-.button {
-    font-size:19px;
-    font-weight:600;
-    vertical-align:middle;
-    cursor:pointer;
-  }
-  .box_modal {
-    position:fixed;
-    display:block;
-    width:300px;
-    height:150px;
-    top:15%;
-    left:90%;
-    margin-top:-75px;
-    margin-left:-150px;
-    background:#d9e5e9;
-    border:1px solid #386980;
-    overflow:hidden;
-    visibility: collapse;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    -webkit-transform: scale(0, 0);
-    -ms-transform: scale(0, 0);
-    transform: scale(0, 0);
-  }
-  .box_modal:hover {
-    opacity: 1;
-    filter: alpha(opacity=100);
-  }
-  .closer {
-    position:absolute;
-    width:30px;
-    height:30px;
-    top:0;
-    right:0;
-    background:#eee;
-    border-left:1px solid #386980;
-    border-bottom:1px solid #386980;
-    text-align:center;
-    line-height:26px;
-    font-size:16x;
-    cursor:pointer;
-  }
-  .text {
-    display:inline-block;
-    padding:20px;
-  }
-  .text h3 {
-    font-size:19px;
-    margin:0;
-  }
-  .text p {
-    font-size:13px;
-  }
-  
-  /* 모달 윈도우가 팝업되는 코어 소스 */
-  input#modal[type=checkbox]:checked ~ .box_modal {
-    visibility: visible;
-    -webkit-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
+
+.modal-btn {
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    width: 20%;
+    height: 10%;
+    top: 18%;
+    left: 77%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.dialog>.tb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog>.tb .inner {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+}
+
+.dialog .top {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.dialog .title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dialog .ct {
+    max-height: 20vh;
+    height: 20vh;
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #fff;
+}
+
+input[id="modal"]:checked+label+.dialog {
+    display: block;
+}
+
+.close {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.text {
+    display: inline-block;
+    padding: 20px;
+}
+
+.text h3 {
+    font-size: 19px;
+    margin: 0;
+}
+
+.text p {
+    font-size: 13px;
+}
+
 #main {
     background-color: #D1E9FF;
 }
@@ -90,10 +106,12 @@
 body {
     background-color: #E2EDFF;
 }
+
 h1 {
     text-align: center;
     color: #2D31A6;
 }
+
 h1 span {
     color: #000000;
 }
@@ -102,6 +120,7 @@ h1 span {
     display: flex;
     justify-content: center;
 }
+
 .button-group input[type="button"] {
     margin: 0 1%;
     padding: 0.5rem 1rem;
@@ -112,6 +131,7 @@ h1 span {
     cursor: pointer;
     width: 22%;
 }
+
 .button-group input[type="button"]:hover {
     background-color: #D1E9FF;
     color: #2D31A6;
@@ -122,6 +142,7 @@ h1 span {
     margin: 0 0.5rem;
     align-self: center;
 }
+
 .content {
     background-color: #FFFEFF;
     border-radius: 1cm;
@@ -131,12 +152,14 @@ h1 span {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .tab-buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 10%;
 }
+
 .tab-buttons input[type="button"] {
     width: 33.33%;
     height: 100%;
@@ -145,6 +168,7 @@ h1 span {
     border-radius: 0;
     cursor: pointer;
 }
+
 .tab-buttons input[type="button"]:first-child {
     border-radius: 1cm 0 0 0;
     background-color: #1E4EAE;
@@ -160,6 +184,30 @@ h1 span {
     border-radius: 0 1cm 0 0;
 }
 
+.roulette_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    /* Fixed height to prevent pushing other elements */
+    overflow: hidden;
+    background: #f0f0f0;
+    /* Optional background color */
+}
+
+.roulette_content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Maintain aspect ratio and contain within parent */
+}
+
+#woori_ci {
+    width: 25px;
+    height: 25px;
+}
+
 .input-group {
     width: 90%;
     max-width: 500px;
@@ -169,6 +217,7 @@ h1 span {
     display: flex;
     align-items: center;
 }
+
 .input-group input[type="text"] {
     width: 100%;
     height: 46px;
@@ -178,9 +227,11 @@ h1 span {
     border: #1E4EAE solid 7px;
     text-align: center;
 }
+
 .input-group input[type="text"]:focus {
     outline: none;
 }
+
 .input-group button {
     position: absolute;
     right: 5px;
@@ -196,25 +247,6 @@ h1 span {
     cursor: pointer;
 }
 
-.roulette_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px; /* Fixed height to prevent pushing other elements */
-    overflow: hidden;
-    background: #f0f0f0; /* Optional background color */
-}
-.roulette_content img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Maintain aspect ratio and contain within parent */
-}
-
-#woori_ci {
-    width: 25px;
-    height: 25px;
-}
 .input-group button:hover {
     background-color: #D1E9FF;
     color: #2D31A6;

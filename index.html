@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,41 @@
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="font.css" media="print" onload="this.media='all'">
     <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
+    <script defer src="page.js"></script>
 </head>
+
 <body id="main">
     <header>
         <div class="side-button">
-            <a href="" class=""><img src="share.png" alt=""></a>
-            <label for="modal" class="button"><img src="introduce.png" alt=""></a></label>
+            <a id="share"><img src="share.png" alt="" style="margin-top: 10px;"></a>
+            <input type="checkbox" id="modal">
+            <label for="modal" class="modal-btn"><img src="info.png" alt=""></label>
+            <div class="dialog">
+                <div class="tb">
+                    <div class="inner" style="max-width:800px;">
+                        <div class="top">
+                            <div class="title">사이트 소개</div>
+                            <label for="modal" class="close">&times;</label>
+                        </div>
+                        <div class="ct">
+                            13시만 기다려지는 지금~~~~~~<br>당신의 행복을 위해 준비했습니다!<br>오늘의 점심은 과연!! 무엇일까요? <br>다양한 게임으로 주변 식당을 선택해보세요!
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    <input type="checkbox" id="modal" class="hidden">
-    <div class="box_modal">
-        <label for="modal" class="closer">x</label>
-        <div>
-            <h3>사이트 소개</h3>
-            <p>13시만 기다려지는 지금~~~~~~<br>당신의 행복을 위해 준비했습니다!<br>오늘의 점심은 과연!! 무엇일까요? <br>다양한 게임으로 주변 식당을 선택해보세요!</p>
-        </div>
-    </div>
-    <div>
+    <div class="container">
         <div class="center">
-            <a id="home_link" href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-lunch-game/"><h1><img src="image.png" id="woori_ci" alt="우리금융그룹 CI" class="responsive-img"> 우리 FISA 3기 <span>점심게임!</span></h1></a>
+            <a id="home_link" href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-lunch-game/">
+                <h1><img src="image.png" id="woori_ci" alt="우리금융그룹 CI" class="responsive-img"> 우리 FISA 3기
+                    <span>점심게임!</span>
+                </h1>
+            </a>
         </div>
         <div class="center button-group">
             <input type="button" value="식당 정하기!" class="regular-button" onclick="location.href='index.html'">
-            <strong>|</strong> 
+            <strong>|</strong>
             <input type="button" value="쏠사람 정하기!" class="regular-button" onclick="location.href='shooting.html'">
         </div>
         <div class="center" style="margin-top: 5%;">
@@ -42,7 +55,7 @@
                 <div class="roulette_content">
                     <img id="roulette_image" src="roulette.png" alt="룰렛 이미지" class="responsive-img">
                 </div>
-                
+
                 <div class="input-group">
                     <input type="text" name="" id="" placeholder="김치도가">
                     <button>GO</button>
@@ -51,4 +64,5 @@
         </div>
     </div>
 </body>
+
 </html>

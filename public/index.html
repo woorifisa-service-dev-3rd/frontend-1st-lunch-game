@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="font.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="roulette.css">
+    <link rel="stylesheet" href="ladder.css">
     <link rel="stylesheet" href="dice.css" media="print" onload="this.media='all'">
     <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
     <script defer src="roulette.js"></script>
@@ -89,11 +90,36 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                </div>
                 <div class="ladder_content">
-                    
+                    <div class = "ladder_container">
+                        <canvas id='canvas_ladder' width="600" height="300" relative;> </canvas>
+                            <div id="inputFormsContainer" style="position: relative; top: 10px; width: 100%;">
+                            </div>
+                        
+                            <div>
+                                <br>
+                                <select name="ladders" id="ladders" type="text" value="1" title="">
+                                    <option value="1" selected="">사다리 2개</option>
+                                    <option value="2">사다리 3개</option>
+                                    <option value="3">사다리 4개</option>
+                                    <option value="4">사다리 5개</option>
+                                    <option value="5">사다리 6개</option>
+                                </select>
+                                <br>
+                                <button type="button" id="btn1" class="ladder_select">1번</button>
+                                <button type="button" id="btn2" class="ladder_select">2번</button>
+                                <button type="button" id="btn3" class="ladder_select">3번</button>
+                                <button type="button" id="btn4" class="ladder_select">4번</button>
+                                <button type="button" id="btn5" class="ladder_select">5번</button>
+                                <button type="button" id="btn6" class="ladder_select">6번</button>
+                                <br>
+                            <button type="button" id="again">다시하기</button>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="dice_content">
                     <div class="dice_container">
                         <canvas id="canvas"></canvas>
@@ -104,10 +130,8 @@
                         <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
 
                     </div>
-                    
                 </div>
-                <div class="ladder_content">
-                </div>
+
                 <div class="dice_content">
                    
                 </div>
@@ -116,3 +140,4 @@
     </div>
 </body>
 </html>
+<script src="ladder.js"></script>

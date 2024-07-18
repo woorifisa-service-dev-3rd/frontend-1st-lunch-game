@@ -1,0 +1,83 @@
+.ladder_container {
+    height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	text-align : center;
+	flex-direction: column;
+    position: relative;
+}
+
+.btn_ladder {
+    /* margin: 0 1%; */
+    padding: 0.5rem 1rem;
+    background-color: #2D31A6;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+	border: 1px solid #fff;
+    cursor: pointer;
+}
+ 
+.btn_ladder:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
+}
+
+.ladder_select {
+    background: #2D31A6;
+    color: #fff;
+    border: 1px solid #2D31A6;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 20px;
+    max-width: 100px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.ladder_select:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
+}
+
+#again {
+    background: #2D31A6;
+    color: #fff;
+    border: 1px solid #2D31A6;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 20px;
+    max-width: 100px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+#again:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
+}
+
+#ladders {
+    background: #2D31A6;
+    color: #fff;
+    border: 1px solid #2D31A6;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    max-width: 100px auto;
+    margin-bottom: 15px;
+    background: #2D31A6;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 0;
+}

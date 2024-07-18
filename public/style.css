@@ -192,7 +192,7 @@ h1 span {
     /* Fixed height to prevent pushing other elements */
     overflow: hidden;
     background: #f0f0f0;
-    border-radius: 0 0 1cm 1cm; 수정
+    border-radius: 0 0 1cm 1cm;
     /* Optional background color */
 }
 
@@ -204,8 +204,7 @@ h1 span {
     height: 30rem;
     /* Fixed height to prevent pushing other elements */
     overflow: hidden;
-    background: #F0F0F0;
-    /* Optional background color */
+    background: #f0f0f0;
 }
 
 .dice_content {
@@ -216,8 +215,7 @@ h1 span {
     height: 30rem;
     /* Fixed height to prevent pushing other elements */
     overflow: hidden;
-    background: #F0F0F0;
-    /* Optional background color */
+    background: #f0f0f0;
 }
 
 #woori_ci {

@@ -207,7 +207,6 @@ h1 span {
     height: 30rem;
     /* Fixed height to prevent pushing other elements */
     overflow: hidden;
-    /* background: #f0f0f0; */
 }
 
 .dice_content {

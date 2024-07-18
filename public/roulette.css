@@ -1,0 +1,107 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+body {
+	height : 960px;
+}
+
+canvas {
+	margin-top : 50px;  
+	transition: 2s;
+}
+
+.dummy {
+	background-color: #1E4EAE;
+	border-radius: 100%;
+}
+
+button {
+	z-index : 1000;
+    background-color: #1E4EAE;
+	color: white;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: .8rem 1.8rem;
+	border: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+	cursor: pointer;
+}
+
+button:active {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+}
+ 
+#restaurant {
+	width: 100%;
+    height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	text-align : center;
+	flex-direction: column;
+	position: relative;
+}
+
+#restaurant::before {
+	margin-top : 50px;	
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 50px;
+	border-radius: 5px;
+	background: #000;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 22;
+
+}
+#addDiv {
+	width: 100%;
+}
+
+.input-group {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 1ch;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    height: 46px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: #1E4EAE solid 7px;
+    text-align: center;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+}
+
+.input-group button {
+    position: absolute;
+    right: 0px;
+    border-radius: 20px;
+    border: #1E4EAE solid 7px;
+    background-color: #1E4EAE;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: auto;
+    height: 60px;
+    margin-left: 328px;
+    cursor: pointer;
+}
+
+.input-group button:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+}

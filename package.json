@@ -1,0 +1,27 @@
+{
+  "name": "frontend-1st-lunch-game",
+  "version": "1.0.0",
+  "description": "> 매일 점심시간마다 **\"오늘은 뭐 먹지?\"** 라는 행복한 고민을 하는 사람들도 있는 반면, 매일 점심메뉴 고르는 것이 가장 힘든 사람들이 있습니다. 바로 우리 KimKong처럼요. 뭐든 잘 먹지만 선택이 어려운 분들을 위해 만들게 되었습니다.",
+  "main": "game.js",
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "express": "^4.19.2",
+    "package.json": "^0.0.0",
+    "three": "0.154.0",
+    "three-stdlib": "^2.24.2",
+    "vite": "^5.3.4"
+  },
+  "type": "module"
+}

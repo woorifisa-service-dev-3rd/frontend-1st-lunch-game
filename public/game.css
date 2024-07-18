@@ -1,3 +1,9 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .side-button {
     display: flex;
     justify-content: end;
@@ -5,81 +11,75 @@
     margin-right: 50px;
 }
 
-/* modal source */
-.hidden {
+#modal {
     display: none;
-    visibility: hidden;
 }
 
-.button {
-    font-size: 19px;
-    font-weight: 600;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-.box_modal {
-    position: fixed;
-    display: block;
-    width: 300px;
-    height: 150px;
-    top: 15%;
-    left: 90%;
-    margin-top: -75px;
-    margin-left: -150px;
-    background: #d9e5e9;
-    border: 1px solid #386980;
-    overflow: hidden;
-    visibility: collapse;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
-    -webkit-transform: scale(0, 0);
-    -ms-transform: scale(0, 0);
-    transform: scale(0, 0);
-}
-
-.box_modal:hover {
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.closer {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 0;
-    right: 0;
-    background: #eee;
-    border-left: 1px solid #386980;
-    border-bottom: 1px solid #386980;
-    text-align: center;
-    line-height: 26px;
-    font-size: 16x;
-    cursor: pointer;
-}
-
-.text {
+.modal-btn {
+    padding: 10px 20px;
     display: inline-block;
+    cursor: pointer;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 50;
+    width: 40%;
+    height: box-size;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    border: 3px solid #2D31A6;
+}
+
+
+.dialog>.tb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog>.tb .inner {
+    width: 100%;
     padding: 20px;
+    background: #fff;
+    border-radius: 16px;
 }
 
-.text h3 {
-    font-size: 19px;
-    margin: 0;
+.dialog .top {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-.text p {
-    font-size: 13px;
+.dialog .title {
+    font-weight: bold;
+    font-size: 20px;
 }
 
-/* 모달 윈도우가 팝업되는 코어 소스 */
-input#modal[type=checkbox]:checked~.box_modal {
-    visibility: visible;
-    -webkit-transform: scale(1, 1);
-    -ms-transform: scale(1, 1);
-    transform: scale(1, 1);
+.dialog .ct {
+    max-height: 20vh;
+    height: 20vh;
+    overflow-y: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #fff;
+}
+
+input[id="modal"]:checked+label+.dialog {
+    display: block;
+}
+
+.close {
+    font-size: 25px;
+    cursor: pointer;
 }
 
 section.container {
@@ -186,4 +186,25 @@ section.container {
     width: 100%;
     display: table;
     vertical-align: middle;
+}
+
+.button-group input[type="button"] {
+    margin: 0 1%;
+    padding: 0.5rem 1rem;
+    margin-top: 1%;
+    background-color: #2D31A6;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 22%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-group input[type="button"]:hover {
+    background-color: #D1E9FF;
+    color: #2D31A6;
+    border: 1px solid #2D31A6;
 }

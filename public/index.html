@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woori FISA 3rd Project</title>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="font.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="roulette.css">
+    <link rel="stylesheet" href="ladder.css">
+    <link rel="stylesheet" href="dice.css" media="print" onload="this.media='all'">
+    <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
+    <script defer src="roulette.js"></script>
+    <script defer src="page.js"></script>
+    <script defer type="module" src="dice.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.min.js",
+            "three/addons/": "https://threejs.org/examples/jsm/"
+          }
+        }
+      </script>
+
+</head>
+
+<body id="main">
+    <header>
+        <div class="side-button">
+            <a id="share"><img src="share.png" alt="" style="margin-top: 10px;"></a>
+            <input type="checkbox" id="modal">
+            <label for="modal" class="modal-btn"><img src="info.png" alt=""></label>
+            <div class="dialog">
+                <div class="tb">
+                    <div class="inner" style="max-width:800px;">
+                        <div class="top">
+                            <div class="title">사이트 소개</div>
+                            <label for="modal" class="close">&times;</label>
+                        </div>
+                        <div class="ct">
+                            1시만 기다려지는 지금~~~~~~<br>당신의 행복을 위해 준비했습니다!<br>오늘의 점심은 과연!! 무엇일까요? <br>다양한 게임으로 주변 식당을 선택해보세요!
+                            <br><br>
+                            [룰렛 설명]<br>
+                            원하는 식당을 적고 추가한다.<br>
+                            원하는 식당을 추가하였으면 룰렛을 돌려 정해진 식당으로 정한다.<br><br>
+
+                            [사다리 타기 설명]<br>
+                            각자 가고싶은 식당을 적는다.<br>
+                            각자 돌아가며 사다리를 만든다.<br>
+                            선택된 식당으로 정한다.<br><br>
+                            
+                            [주사위 설명]<br>
+                            참여하는 인원이 전부 가고싶은 식당을 정한다.<br>
+                            각자 주사위를 굴려 숫자가 높게 나온 사람의 의견을 따른다.<br>
+                            만약 동점이 나오면 동점인 사람끼리 재대결을 한다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="center">
+            <a id="home_link" href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-lunch-game/">
+                <h1><img src="image.png" id="woori_ci" alt="우리금융그룹 CI" class="responsive-img"> 우리 FISA 3기
+                    <span>점심게임!</span>
+                </h1>
+            </a>
+        </div>
+        <div class="center button-group">
+            <input type="button" value="식당 정하기!" class="regular-button" onclick="location.href='index.html'">
+            <input type="button" value="쏠사람 정하기!" class="regular-button" onclick="location.href='shooting.html'">
+        </div>
+        <div class="center" style="margin-top: 5%;">
+            <div class="content">
+                <div class="tab-buttons">
+                    <input type="button" value="룰렛으로 정하기!" class="regular-button" id="roulette_button">
+                    <input type="button" value="사다리로 정하기!" class="regular-button" id="ladder_button">
+                    <input type="button" value="주사위로 정하기!" class="regular-button" id="dice_button">
+                </div>
+                <div class="roulette_content">
+                    <div id="restaurant">
+                        <canvas width="350" height='350' class="dummy"></canvas>
+                        <div class="button-group">
+                            <button onclick="rotate()">돌려돌려 돌림판!!</button>
+                            <a id="init"><img src="refresh.png" alt=""></a>
+                        </div>
+                        <div id="addDiv">
+                            <div class="input-group">
+                                <input type="text" id="restaurantAdd" placeholder="식당/음식을 입력해주세요">
+                                <button onclick="add()">추가</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ladder_content">
+                    <div class = "ladder_container">
+                        <canvas id='canvas_ladder' width="600" height="300" relative;> </canvas>
+                            <div id="inputFormsContainer" style="position: relative; top: 10px; width: 100%;">
+                            </div>
+                        
+                            <div>
+                                <br>
+                                <select name="ladders" id="ladders" type="text" value="1" title="">
+                                    <option value="1" selected="">사다리 2개</option>
+                                    <option value="2">사다리 3개</option>
+                                    <option value="3">사다리 4개</option>
+                                    <option value="4">사다리 5개</option>
+                                    <option value="5">사다리 6개</option>
+                                </select>
+                                <br>
+                                <button type="button" id="btn1" class="ladder_select">1번</button>
+                                <button type="button" id="btn2" class="ladder_select">2번</button>
+                                <button type="button" id="btn3" class="ladder_select">3번</button>
+                                <button type="button" id="btn4" class="ladder_select">4번</button>
+                                <button type="button" id="btn5" class="ladder_select">5번</button>
+                                <button type="button" id="btn6" class="ladder_select">6번</button>
+                                <br>
+                            <button type="button" id="again">다시하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dice_content">
+                    <div class="dice_container">
+                        <canvas id="canvas"></canvas>
+                        <div class="ui-controls">
+                            <div class="score">Score: <span id="score-result"></span></div>
+                            <button id="roll-btn">throw the dice</button>
+                        </div>
+                        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+                    </div>
+                </div>
+
+                <div class="dice_content">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="ladder.js"></script>

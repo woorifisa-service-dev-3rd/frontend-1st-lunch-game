@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woori FISA 3rd Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="font.css" />
+    <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
+
+    <link as="image" rel="image preload" href="fire.gif" type="image/gif" />
+    <link as="image" rel="image preload" href="fail.gif" type="image/gif" />
+    <link as="image" rel="image preload" href="main.png" type="image/png" />
+    <link rel="stylesheet" href="game.css" />
+
+</head>
+<body id="main">
+    <header>
+        <div class="side-button">
+            <a href="#" class=""><img src="share.png" alt="" style="margin-top: 10px;"></a>
+            <input type="checkbox" id="modal">
+            <label for="modal" class="modal-btn"><img src="info.png" alt=""></label>
+            <div class="dialog">
+                <div class="tb">
+                    <div class="inner" style="max-width:800px;">
+                        <div class="top">
+                            <div class="title">사이트 소개</div>
+                            <label for="modal" class="close">&times;</label>
+                        </div>
+                        <div class="ct">
+                            커피 한 잔 할래용 ~ ? ☕☕<br>러시안 룰렛을 돌려 모두에게 행복을 쏴줄 행운의 주인공(^^;;)이 누가 될 지 확인해보세요~
+                            <br><br>
+                            [쏠사람 정하기 설명]<br>
+                            참여하는 인원과 총알을 몇 발 장전할지 협의한다. (협의가 어려울 경우 룰렛이나 주사위로,,ㅎㅎ 사다리도,,,ㅎ)<br>
+                            총알의 장탄수를 선택한다. (쫄깃한 게임을 원할 수록 장탄수를 높게! 최대 탄창 수: 6발)<br>
+                            돌아가면서 발사를 눌러 걸리는 사람이 정해진 가격을 지불한다.<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div class="center">
+            <a id="home_link" href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-lunch-game/">
+                <h1><img src="image.png" id="woori_ci" alt="우리금융그룹 CI" class="responsive-img"> 우리 FISA 3기
+                    <span>점심게임!</span></h1>
+            </a>
+        </div>
+        <div class="center button-group">
+            <input type="button" value="식당 정하기!" class="regular-button" onclick="location.href='index.html'">
+            <input type="button" value="쏠사람 정하기!" class="regular-button" onclick="location.href='shooting.html'">
+        </div>
+    </div>
+    <section class="container">
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="frame-img">
+                        <iframe id="base" class="idle" title="게임 화면"></iframe>
+                    </td>
+                    <td>
+                        <div class="custom-select">
+                            <form name="fire">
+                                <p> 장전할 탄약의 양 (1-6):</p>
+                                <br />
+                                <select name="bullets" id="bullets" type="text" value="1" title="">
+                                    <option value="1" selected="">탄약 1개</option>
+                                    <option value="2">탄약 2개</option>
+                                    <option value="3">탄약 3개</option>
+                                    <option value="4">탄약 4개</option>
+                                    <option value="5">탄약 5개</option>
+                                    <option value="6">탄약 6개</option>
+                                    <br />
+                                </select>
+
+                                <input id="message" class="btn" name="fire" type="button" value="Play Shooting"
+                                    onclick="fireit()" />
+                                </p>
+                            </form>
+                        </div>
+                        <p>
+                            <script src="game.js"></script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+
+</html>

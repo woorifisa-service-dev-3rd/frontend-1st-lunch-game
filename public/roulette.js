@@ -2,8 +2,10 @@ const $c = document.querySelector('canvas');
 const dummy = document.getElementsByClassName('dummy');
 const ctx = $c.getContext('2d');
 const restaurantAdd = document.querySelector('#restaurantAdd');
-const product = [];
-const colors = [];
+const init = document.getElementById('init');
+
+let product = [];
+let colors = [];
 
 const newMake = () => {
   const [cw, ch] = [$c.width / 2, $c.height / 2];
@@ -83,5 +85,17 @@ function add(){
     alert('식당/음식을 입력한 후 버튼을 클릭 해 주세요');
   }
 }
+
+init.addEventListener('click', () => {
+  product = [];
+  colors = [];
+
+  ctx.clearRect(0, 0, $c.width, $c.height);
+  $c.classList.add('dummy');
+  $c.style.transition = 'none';
+
+  newMake();
+});
+
 
 newMake();

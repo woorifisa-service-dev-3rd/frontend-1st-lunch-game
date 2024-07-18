@@ -13,6 +13,14 @@
     <script defer src="roulette.js"></script>
     <script defer src="page.js"></script>
     <script defer type="module" src="dice.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.min.js",
+            "three/addons/": "https://threejs.org/examples/jsm/"
+          }
+        }
+      </script>
 
 </head>
 
@@ -81,14 +89,7 @@
                             <button id="roll-btn">throw the dice</button>
                         </div>
                         <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
-                        <script type="importmap">
-                            {
-                              "imports": {
-                                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.min.js",
-                                "three/addons/": "https://threejs.org/examples/jsm/"
-                              }
-                            }
-                          </script>
+
                     </div>
                     
                 </div>

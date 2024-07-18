@@ -291,7 +291,7 @@ function render() {
 function updateSceneSize() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+    renderer.setSize(window.innerWidth / 2.5, window.innerHeight / 2.5);
     canvasEl.style.cssText = 'display: flex; justify-content: center; align-item: center;';
 }
 

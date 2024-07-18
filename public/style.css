@@ -226,3 +226,22 @@ h1 span {
 #home_link {
     text-decoration: none;
 }
+
+.button-group {
+    display: flex;
+    align-items: center;
+}
+
+.button-group button {
+    margin-right: 30px; 
+    margin-left: 60px;
+    padding: 20px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-group a img {
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+}

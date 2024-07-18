@@ -9,8 +9,19 @@
     "globals": "^15.8.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cannon-es": "^0.20.0",
+    "express": "^4.19.2",
+    "package.json": "^0.0.0",
+    "three": "0.154.0",
+    "three-stdlib": "^2.24.2",
+    "vite": "^5.3.4"
+  },
+  "type": "module"
 }

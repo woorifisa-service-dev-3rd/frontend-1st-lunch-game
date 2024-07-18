@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+    
+    <head>
+        <script defer type="importmap">
+            {
+              "imports": {
+                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.min.js",
+                "three/addons/": "https://threejs.org/examples/jsm/"
+              }
+            }
+          </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Woori FISA 3rd Project</title>
+        <link rel="stylesheet" href="/assets/style-CDAcbGwE.css" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="data:text/css;base64,QGNoYXJzZXQgInV0Zi04IjsNCg0KQGZvbnQtZmFjZSB7DQoJZm9udC1mYW1pbHk6ICd3b29yaURhdW1CJzsNCglmb250LXdlaWdodDogNTAwOw0KCXNyYzogdXJsKGZvbnQvV29vcmlkYXVtQi53b2ZmKSBmb3JtYXQoIndvZmYiKTsNCn0NCg0KQGZvbnQtZmFjZSB7DQoJZm9udC1mYW1pbHk6ICd3b29yaURhdW1MJzsNCglmb250LXdlaWdodDogMTAwOw0KCXNyYzogdXJsKGZvbnQvV29vcmlkYXVtTC53b2ZmKSBmb3JtYXQoIndvZmYiKTsNCn0NCg0KQGZvbnQtZmFjZSB7DQoJZm9udC1mYW1pbHk6ICd3b29yaURhdW0nOw0KCWZvbnQtd2VpZ2h0OiAzMDA7DQoJc3JjOiB1cmwoZm9udC9Xb29yaWRhdW1SLndvZmYpIGZvcm1hdCgid29mZiIpOw0KfQ==" media="print" onload="this.media='all'">
+        <link rel="stylesheet" href="data:text/css;base64,LmRpY2VfY29udGFpbmVyIHsNCiAgICBwb3NpdGlvbjogZmxleDsNCiAgICB0b3A6IDA7DQogICAgbGVmdDogMDsNCiAgICB3aWR0aDogMTAwJTsNCiAgICBoZWlnaHQ6IDEwMCU7DQogICAgZmxleDogMTsNCgkgY29sb3I6ICM0NDQ0NDQ7DQogICAgZGlzcGxheTogZmxleDsNCiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsNCiAgICBhbGlnbi1pdGVtczogY2VudGVyOw0KICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmOw0KfQ0KDQpjYW52YXMgew0KICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTsNCiAgICB0b3A6IDA7DQogICAgbGVmdDogMDsNCn0NCg0KLnVpLWNvbnRyb2xzIHsNCiAgICBwb3NpdGlvbjogcmVsYXRpdmU7DQogICAgd2lkdGg6IDEwMCU7DQogICAgbWF4LXdpZHRoOiA1MDBweDsNCiAgICB1c2VyLXNlbGVjdDogbm9uZTsNCiAgICBsaW5lLWhlaWdodDogMS41Ow0KICAgIHBhZGRpbmc6IDEwcHg7DQoJIG1hcmdpbi10b3A6IC01JTsNCn0NCg0KLnVpLWNvbnRyb2xzIC5zY29yZSB7DQogICAgbWFyZ2luLWxlZnQ6IC4yNWVtOw0KfQ0KDQoudWktY29udHJvbHMgI3Njb3JlLXJlc3VsdCB7DQogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOw0KICAgIG1pbi13aWR0aDogMS44ZW07DQp9DQoNCi51aS1jb250cm9scyAjcm9sbC1idG4gew0KICAgIGJhY2tncm91bmQtY29sb3I6ICM0QkMwQzg7DQogICAgZm9udC13ZWlnaHQ6IGJvbGQ7DQogICAgYm9yZGVyOiBub25lOw0KICAgIHBhZGRpbmc6IC41ZW0gMWVtOw0KICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7DQogICAgY3Vyc29yOiBwb2ludGVyOw0KICAgIG1hcmdpbjogMWVtIDAgMCAwOw0KICAgIHRyYW5zaXRpb246IGJhY2tncm91bmQtY29sb3IgMC4ycywgdHJhbnNmb3JtIDAuMXM7DQp9DQoNCi51aS1jb250cm9scyAjcm9sbC1idG46YWN0aXZlIHsNCiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoNHB4KTsNCn0NCg0KLmxpbmtzIHsNCiAgICBwb3NpdGlvbjogZml4ZWQ7DQogICAgYm90dG9tOiAyMHB4Ow0KICAgIHJpZ2h0OiAyMHB4Ow0KICAgIGZvbnQtc2l6ZTogMThweDsNCiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjsNCgkgZGlzcGxheTogZmxleDsNCgkgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsNCgkgYWxpZ24taXRlbXM6IGVuZDsNCn0NCg0KYSBpbWcuaWNvbiB7DQogICAgZGlzcGxheTogaW5saW5lLWJsb2NrOw0KICAgIGhlaWdodDogMWVtOw0KICAgIG1hcmdpbjogMCAwIC0wLjFlbSAwLjNlbTsNCn0=" media="print" onload="this.media='all'">
+        <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
+        <script type="module" crossorigin src="assets/index-93NPyrBZ.js"></script>
+
+</head>
+
+<body id="main">
+    <header>
+        <div class="side-button">
+            <a id="share"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEESURBVHgB7VS7EsFAFD27tIzWo/AJWp1Sx2+oEB9AOg3DJ/gDvsBo+AUdCo/So7fuxgwSmWQ3k5gxkzOTzZ37OCfZ3XuBGKGi0GkiZ3R1ShLKmZJYoE9WBakycFstVMrUBJ5f3bNshjOtVVURf4E3uQnGpMKJlonlUxDhUCU/DHsv/9M2rVjWaHlRJL2CtB0X3NHGcTj6ikmRnIFwke/MrUcDHBHjxwKykXwOzRMu9XYBgTo4qyEoXOr//wySeuliRn0RocDepeF8YN8iOciEKCEohCg6XY4/YGPKqtMI2NBg20KPvUS3KENv89Nrn6bX5Rbp8o7Ii9CFwBqcN7AfTBFDBw9J4kbtBPFOeAAAAABJRU5ErkJggg==" alt="" style="margin-top: 10px;"></a>
+            <input type="checkbox" id="modal">
+            <label for="modal" class="modal-btn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAH5SURBVHgB3VVLUsJAEO0ZJWuWSmHV3EC5AZwAOAHcAAQX7oSdCz94AvEE4AngCHiDWGWpS3RnUpmxuycI+UkJ5UJfVZJJpqdfT0/3C8Bfh1hroXp58N+bODpEc8XfDMxBmHvIOVNwz93NCNSpAt8/A2Oa4RcXhHDt0BwhSd56EEPI5fpZROkExZMyGD0Ko70BRw/BHUQd7LUVSNFDFw0mB3EMz5fj9QSFbg29onMxAx3U4TXmOA4mkhMc0bMCTxfTbAJKi+dNeOzoEkY9j8wXuy0IjICXq0F0XRvPaWeC6VTgOKXVdMmIIeWcItG6knBOMCY9pWQb4G7Fl48UUPSFjsHrFjZFodNjH1R5EN+B75X5qXU/0wGlaL/TzpzXWAyEDy7rGIEQVbzPvz1UAzWsnGrmvF2L5Uw9Y7G7sjiPJDPYFrZX1OJVwi9jSWD0I5fZ1qAu129JApsexY2zKagSbarHSYJcWAFSNmFTLHog0NMkATeWucNRiyP5KTh6FsbhaiVGD1mbHnej549Wm2UJlGiNV8I52lqJceN9lGx9UlKtrbHjVNbpvdUvDIgOF0Q9rqjp2nKAihqYa1qeqfcKi8GTDfRgO1vIelxJswkIUb0nyzlLOMGWswoth5yWDAVY/8skoh2JPyCo4m7CczEu3h648tJU91/hEzjf0MZmaIteAAAAAElFTkSuQmCC" alt=""></label>
+            <div class="dialog">
+                <div class="tb">
+                    <div class="inner" style="max-width:800px;">
+                        <div class="top">
+                            <div class="title">사이트 소개</div>
+                            <label for="modal" class="close">&times;</label>
+                        </div>
+                        <div class="ct">
+                            13시만 기다려지는 지금~~~~~~<br>당신의 행복을 위해 준비했습니다!<br>오늘의 점심은 과연!! 무엇일까요? <br>다양한 게임으로 주변 식당을 선택해보세요!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="center">
+            <a id="home_link" href="https://woorifisa-service-dev-3rd.github.io/frontend-1st-lunch-game/">
+                <h1><img src="/assets/image-DB_dt_tQ.png" id="woori_ci" alt="우리금융그룹 CI" class="responsive-img"> 우리 FISA 3기
+                    <span>점심게임!</span>
+                </h1>
+            </a>
+        </div>
+        <div class="center button-group">
+            <input type="button" value="식당 정하기!" class="regular-button" onclick="location.href='index.html'">
+            <strong>|</strong>
+            <input type="button" value="쏠사람 정하기!" class="regular-button" onclick="location.href='shooting.html'">
+        </div>
+        <div class="center" style="margin-top: 5%;">
+            <div class="content">
+                <div class="tab-buttons">
+                    <input type="button" value="룰렛으로 정하기!" class="regular-button" id="">
+                    <input type="button" value="사다리로 정하기!" class="regular-button" id="">
+                    <input type="button" value="주사위로 정하기!" class="regular-button" id="dice_button">
+                </div>
+                <div class="roulette_content">
+                    
+                </div>
+                <div class="ladder_content">
+                    
+                </div>
+                <div class="dice_content">
+                    <div class="dice_container">
+                        <canvas id="canvas"></canvas>
+                        <div class="ui-controls">
+                            <div class="score">Score: <span id="score-result"></span></div>
+                            <button id="roll-btn">throw the dice</button>
+                        </div>
+                        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="input-group">
+                    <input type="text" name="" id="" placeholder="김치도가">
+                    <button>GO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

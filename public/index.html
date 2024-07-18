@@ -7,8 +7,10 @@
     <title>Woori FISA 3rd Project</title>
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="font.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="dice.css" media="print" onload="this.media='all'">
     <link rel="icon" href="https://woorifisa.com/wp-content/uploads/2023/08/cropped-favicon-32x32.png" sizes="32x32">
     <script defer src="page.js"></script>
+    <script defer type="module" src="dice.js"></script>
 </head>
 
 <body id="main">
@@ -48,12 +50,34 @@
         <div class="center" style="margin-top: 5%;">
             <div class="content">
                 <div class="tab-buttons">
-                    <input type="button" value="룰렛으로 정하기!" class="regular-button">
-                    <input type="button" value="사다리로 정하기!" class="regular-button">
-                    <input type="button" value="주사위로 정하기!" class="regular-button">
+                    <input type="button" value="룰렛으로 정하기!" class="regular-button" id="roulette_button">
+                    <input type="button" value="사다리로 정하기!" class="regular-button" id="">
+                    <input type="button" value="주사위로 정하기!" class="regular-button" id="dice_button">
                 </div>
                 <div class="roulette_content">
-                    <img id="roulette_image" src="roulette.png" alt="룰렛 이미지" class="responsive-img">
+                    
+                </div>
+                <div class="ladder_content">
+                    
+                </div>
+                <div class="dice_content">
+                    <div class="dice_container">
+                        <canvas id="canvas"></canvas>
+                        <div class="ui-controls">
+                            <div class="score">Score: <span id="score-result"></span></div>
+                            <button id="roll-btn">throw the dice</button>
+                        </div>
+                        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+                        <script type="importmap">
+                            {
+                              "imports": {
+                                "three": "https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.module.min.js",
+                                "three/addons/": "https://threejs.org/examples/jsm/"
+                              }
+                            }
+                          </script>
+                    </div>
+                    
                 </div>
 
                 <div class="input-group">
@@ -64,5 +88,4 @@
         </div>
     </div>
 </body>
-
 </html>

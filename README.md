@@ -72,7 +72,6 @@
 - 커밋 메시지의 띄어쓰기는 _로 변경
 
 ## esLint 적용 Rules
-    ~~~css
     {
             'semi': ['error', 'always'], // 세미콜론 허용 여부, 항상 찍도록 설정.
             'quotes': ['error', 'single'], // 따옴표 종류, 홑따옴표로 설정
@@ -81,4 +80,3 @@
             'comma-dangle': ['error', 'only-multiline'], // 객체, 배열 등에서 마지막 항목 뒤에 , 사용 (es5와 비슷한 설정), 항상 사용불가 설정
             'arrow-parens': ['error', 'always'], // 화살표 함수 매개변수 1개일 때 ()로 감싸주기, 항상 사용불가 설정
         }
-    ~~~

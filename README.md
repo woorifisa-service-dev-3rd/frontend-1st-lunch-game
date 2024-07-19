@@ -11,10 +11,10 @@
 ### 페이지 각 기능별 소개
 
 식당 정하기 페이지
-![alt text](img/Lunch_Game_Main.png)
+![alt text](public/img/Lunch_Game_Main.png)
 
 쏠사람 정하기 페이지
-![alt text](img/Lunch_Game_Shooting.png)
+![alt text](public/img/Lunch_Game_Shooting.png)
 
 ## UI Style Guide Line
 1. 폰트 서체 및 폰트 사이즈
